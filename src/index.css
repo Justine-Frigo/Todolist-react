@@ -7,8 +7,4 @@
 
 body{
     min-height: 100vh;
-    background: rgb(141,128,176);
-    background: linear-gradient(180deg, rgba(141,128,176,1) 0%, rgba(131,151,196,1) 50%, rgba(170,203,224,1) 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
