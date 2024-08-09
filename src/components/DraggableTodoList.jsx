@@ -24,7 +24,7 @@ function DraggableTodoItem({ todo, index, moveTodo, toggleTodoCompletion, delete
   });
 
   return (
-    <li ref={(node) => ref(drop(node))} className="flex items-center mb-2 border border-red-500 cursor-pointer">
+    <li ref={(node) => ref(drop(node))} className="flex items-center mb-2 cursor-pointer bg-[#4995ac] p-3 m-4 rounded-lg text-slate-50 font-semibold">
       <input
         className="mr-3"
         type="checkbox"
@@ -35,10 +35,10 @@ function DraggableTodoItem({ todo, index, moveTodo, toggleTodoCompletion, delete
         {todo.text}
       </span>
       <button
-        className="bg-none border-none cursor-pointer ml-3"
+        className="ml-auto bg-none border-none cursor-pointer"
         onClick={() => deleteTodo(index)}
       >
-        <FontAwesomeIcon icon={faTrash} className="text-red-400" />
+        <FontAwesomeIcon icon={faTrash} className="text-red-500" />
       </button>
     </li>
   );
@@ -66,12 +66,14 @@ export default function DraggableTodoList({ todos, setTodos, toggleTodoCompletio
           />
         ))}
       </ul>
+      <div className='flex justify-center'>
       <button
-        className="bg-red-500 text-white border-none p-3 mt-5 cursor-pointer rounded-lg"
+        className="bg-red-500 text-slate-50 border-none p-3 mt-4 cursor-pointer rounded-lg font-semibold"
         onClick={deleteSelectedTodos}
       >
         Delete Selected Todos
       </button>
+      </div>
     </DndProvider>
   );
 }

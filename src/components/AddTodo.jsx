@@ -24,7 +24,7 @@ export default function AddTodo({ onAddTodo }) {
           onChange={handleInputChange}
           placeholder="Type a new todo"
         />
-        <button className='border border-red-500' type="submit">Add Todo</button>
+        <button className='bg-[#4995ac] p-2 m-3 rounded-lg text-slate-50 font-semibold' type="submit">Add Todo</button>
       </form>
     </div>
   );

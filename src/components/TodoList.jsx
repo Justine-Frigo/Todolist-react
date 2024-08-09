@@ -36,7 +36,7 @@ export default function TodoList() {
   return (
     <div>
       <AddTodo onAddTodo={addTodo} />
-      <h2 className='text-center text-2xl font-semibold mt-5 mb-5'>Todos</h2>
+      <h2 className='text-center text-2xl font-semibold mt-5 mb-5 text-[#4995ac]'>Todos</h2>
       <DraggableTodoList 
         todos={todos} 
         setTodos={setTodos} 
