@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import AddTodo from './AddTodo';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import DraggableTodoList from './DraggableTodoList';
 
 export default function TodoList() {
   const [todos, setTodos] = useState(() => {
@@ -38,31 +37,15 @@ export default function TodoList() {
     <div>
       <AddTodo onAddTodo={addTodo} />
       <h2 className='text-center text-2xl font-semibold mt-5 mb-5'>Todos</h2>
-      <ul>
-        {todos.map((todo, index) => (
-          <li className='flex items-center' key={index}>
-            <input className='mr-3'
-              type="checkbox" 
-              checked={todo.completed} 
-              onChange={() => toggleTodoCompletion(index)} 
-            /> 
-            {todo.text}
-            <button className='bg-none border-none cursor-pointer ml-3'
-              onClick={() => deleteTodo(index)} 
-            >
-           <FontAwesomeIcon icon={faTrash} className='text-red-400' />
-            </button>
-          </li>
-        ))}
-      </ul>
-      <button className='bg-red-500 text-white border-none p-3 mt-5 cursor-pointer rounded-lg'
-        onClick={deleteSelectedTodos} 
-      >
-        Delete Selected Todos
-      </button>
+      <DraggableTodoList 
+        todos={todos} 
+        setTodos={setTodos} 
+        toggleTodoCompletion={toggleTodoCompletion} 
+        deleteTodo={deleteTodo} 
+        deleteSelectedTodos={deleteSelectedTodos} 
+      />
     </div>
   );
 }
-
 
 
