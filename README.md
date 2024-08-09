@@ -46,8 +46,8 @@ To run this project locally, you need to have Node.js and npm (Node Package Mana
 
 - src/: Contains all the source code.
 - components/: Reusable components used throughout the application.
-- App.js: The root component that wraps all other components.
-- index.js: The entry point for the React application.
+- App.jsx: The root component that wraps all other components.
+- index.jsx: The entry point for the React application.
 
 ## Contributing
 Contributions are welcome! If you have any suggestions, issues, or want to contribute to the project, feel free to create a pull request or issue.
